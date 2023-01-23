@@ -1,0 +1,107 @@
+.pageStyle{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.TitleContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 115px;
+}
+
+.TitleText {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #000000;
+}
+
+.CircleItem{
+    background-color: #000000;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin: 100px;
+    z-index: 1;
+}
+.CircleItemPushed{
+    background-color: #000000;
+    position: absolute;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin-top: 100px;
+    right: 70%;
+    z-index: 1;
+}
+
+.CircleTextContainer{
+    padding-top: 45%;
+}
+
+.CircleText {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300w;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.clickedContainer{
+    display: flex;
+    flex-direction: row;
+}
+.infoBlock{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    margin-top: 150px;
+    left: 25%;
+    height: 300px;
+    width: 60%;
+    background-color: gray;
+    z-index: 0;
+}
+
+.itemContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-top: 2%;
+    width: 300px;
+}
+.sourceContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    margin-top: 2%;
+    width: 300px;
+}
+
+.ideaTitle{
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.ideaText {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+}
