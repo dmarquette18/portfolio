@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './videography.css'
 
-const videographyApp = (props) => {
+const VideographyApp = (props) => {
     return(
         <div className='videoStyle'>
             
@@ -9,4 +9,4 @@ const videographyApp = (props) => {
     )
 }
 
-export default videographyApp;
+export default VideographyApp;
