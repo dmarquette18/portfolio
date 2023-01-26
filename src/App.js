@@ -3,7 +3,7 @@ import './App.css';
 import LandingPageApp from './LandingPage/LandingPageApp';
 import CodePortfolioApp from './CodePortfolio/CodePortfolioApp';
 import DesignPortfolioApp from './DesignPortfolio/DesignPortfolioApp';
-import VideographyApp from './videography/videographyApp';
+import VideographyApp from './DesignPortfolio/Videography/VideographyApp';
 import { Routes, Route } from "react-router-dom"
 import GraphicApp from './DesignPortfolio/Graphics/GraphicApp';
 

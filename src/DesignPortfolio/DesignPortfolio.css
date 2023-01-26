@@ -30,7 +30,8 @@
     margin-top: 150px;
     min-height: 300px;
     min-width: 300px;
-    
+    margin-left: 30px;
+    margin-right: 30px;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -38,6 +39,13 @@
 
 .boxTextContainer{
     margin-top: 40%;
+    width: 100%;
+}
+
+.boxesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
 }
 
 .boxText {

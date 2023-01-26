@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './Graphic.css'
+import './Videography.css'
 import CardComponent from '../../components/CardComponent';
 import CloseIcon from '@mui/icons-material/Close';
 
 
-const GraphicApp = () => {
+const VideographyApp = () => {
     var [selectedSquare, updateSelectedSquare] = useState([])
 
     const changeSquare = (item) => {
@@ -12,9 +12,9 @@ const GraphicApp = () => {
     }
 
     return (
-        <div className='GraphicContainer'>
-            <div className='GraphicTitleContainer'>
-                <div className='GraphicTitleText'>G R A P H I C</div>
+        <div className='VideographyContainer'>
+            <div className='VideographyTitleContainer'>
+                <div className='VideographyTitleText'>V I D E O G R A P H Y</div>
             </div>
 
             {(selectedSquare.length <= 0 ?
@@ -44,23 +44,23 @@ const GraphicApp = () => {
                         <CardComponent />
                     </div>
                 </div> :
-                <div className='ExpandedGraphicCard'>
+                <div className='ExpandedVideographyCard'>
                     <div className='CloseIconHolder' onClick={function () { updateSelectedSquare([]) }}>
                         <CloseIcon className='closeIcon'/>
                     </div>
-                    <div className='ExpandedGraphicCardCover' />
+                    <div className='ExpandedVideographyCardCover' />
                     <div className='textContainerDesign'>
-                        <div className='ExpandingGraphicCardProjTitleContainer'>
-                            <div className='ExpandingGraphicCardProjTitleText'>Fancy Work #2</div>
+                        <div className='ExpandingVideographyCardProjTitleContainer'>
+                            <div className='ExpandingVideographyCardProjTitleText'>Fancy Work #2</div>
                         </div>
                         <div className='overProjContainer'>
-                            <div className='ExpandingGraphicCardProjContainer'>
-                                <div className='ExpandingGraphicCardProjTitleSubText'>purpose</div>
-                                <div className='ExpandingGraphicCardProjDescText'>i did this to help out wiht a childrens orphanage in subsuharrean africa and got lice there and this is that</div>
+                            <div className='ExpandingVideographyCardProjContainer'>
+                                <div className='ExpandingVideographyCardProjTitleSubText'>purpose</div>
+                                <div className='ExpandingVideographyCardProjDescText'>i did this to help out wiht a childrens orphanage in subsuharrean africa and got lice there and this is that</div>
                             </div>
-                            <div className='ExpandingGraphicCardProjContainer'>
-                                <div className='ExpandingGraphicCardProjTitleSubText'>inspiration</div>
-                                <div className='ExpandingGraphicCardProjDescText'>this project was inpired by seeing a lot of butts and being like "wow look at all those butts never thought i'd see that many in a life"</div>
+                            <div className='ExpandingVideographyCardProjContainer'>
+                                <div className='ExpandingVideographyCardProjTitleSubText'>inspiration</div>
+                                <div className='ExpandingVideographyCardProjDescText'>this project was inpired by seeing a lot of butts and being like "wow look at all those butts never thought i'd see that many in a life"</div>
                             </div>
                         </div>
                     </div>
@@ -72,4 +72,4 @@ const GraphicApp = () => {
     )
 }
 
-export default GraphicApp;
+export default VideographyApp;

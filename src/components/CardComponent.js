@@ -1,10 +1,9 @@
 import React from 'react';
-import '../Graphic.css'
+import './component.css'
 
 const CardComponent = () => {
     return(
         <div className='GraphicCard'>
-
         </div>
     )
 }

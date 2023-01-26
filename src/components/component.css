@@ -1,0 +1,8 @@
+.GraphicCard {
+    display: flex;
+    width: 376px;
+    height: 376px;
+    background-color: white;
+    border-radius: 25%;
+    margin: 30px;
+}
