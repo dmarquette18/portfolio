@@ -83,8 +83,20 @@ const ProjectBubble = (props, { isVisible }) => {
 
         circle:{
 
+        },
+        offscreen: {
+          x: -410,
+          opacity: 20
+        },
+        onscreen: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            type: "spring",
+            bounce: 0.1,
+            duration: 0.6
+          }
         }
-
 
 
 
@@ -126,10 +138,12 @@ const ProjectBubble = (props, { isVisible }) => {
                 </div>) )}
                 {(!clicked &&
                     (
-                        <motion.div key="circleRegular" variants={variants} className='CircleItem' onClick={changeState} initial={{ opacity: 1, x:-410}} animate="regularLeftEntrance" whileHover='whileHovered' exit='infoBoxExit'>
-                            <div className='CircleTextContainer'>
-                                <div className='CircleText'>{props.name}</div>
-                            </div>
+                        <motion.div onClick={changeState} initial="offscreen" whileInView="onscreen" whileHover='whileHovered' exit='infoBoxExit'  viewport={{ once: true, amount: 0.1 }}>
+                            <motion.div key="circleRegular" variants={variants} className='CircleItem' >
+                                <div className='CircleTextContainer'>
+                                    <div className='CircleText'>{props.name}</div>
+                                </div>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </LayoutGroup>

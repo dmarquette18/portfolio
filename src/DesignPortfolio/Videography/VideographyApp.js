@@ -2,10 +2,31 @@ import React, { useState } from 'react';
 import './Videography.css'
 import CardComponent from '../../components/CardComponent';
 import CloseIcon from '@mui/icons-material/Close';
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion"
+
 
 
 const VideographyApp = () => {
     var [selectedSquare, updateSelectedSquare] = useState([])
+
+    const data = [{title: "fancy work butt", 
+                  purpose: "i did this to help out wiht a childrens orphanage in subsuharrean africa and got lice there and this is that",
+                  inspiration: "this project was inpired by seeing a lot of butts and being like 'wow look at all those butts never thought i'd see that many in a life'"},
+                  {title: "fancy work butt", 
+                  purpose: "i did this to help out wiht a childrens orphanage in subsuharrean africa and got lice there and this is that",
+                  inspiration: "this project was inpired by seeing a lot of butts and being like 'wow look at all those butts never thought i'd see that many in a life'"},
+                  {title: "fancy work butt", 
+                  purpose: "i did this to help out wiht a childrens orphanage in subsuharrean africa and got lice there and this is that",
+                  inspiration: "this project was inpired by seeing a lot of butts and being like 'wow look at all those butts never thought i'd see that many in a life'"},
+                  {title: "fancy work butt", 
+                  purpose: "i did this to help out wiht a childrens orphanage in subsuharrean africa and got lice there and this is that",
+                  inspiration: "this project was inpired by seeing a lot of butts and being like 'wow look at all those butts never thought i'd see that many in a life'"},
+                  {title: "fancy work butt", 
+                  purpose: "i did this to help out wiht a childrens orphanage in subsuharrean africa and got lice there and this is that",
+                  inspiration: "this project was inpired by seeing a lot of butts and being like 'wow look at all those butts never thought i'd see that many in a life'"},
+                  {title: "fancy work butt", 
+                  purpose: "i did this to help out wiht a childrens orphanage in subsuharrean africa and got lice there and this is that",
+                  inspiration: "this project was inpired by seeing a lot of butts and being like 'wow look at all those butts never thought i'd see that many in a life'"}]
 
     const changeSquare = (item) => {
         updateSelectedSquare([item]);
@@ -19,30 +40,13 @@ const VideographyApp = () => {
 
             {(selectedSquare.length <= 0 ?
                 <div className='CardContainer'>
-                    <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
-                        <CardComponent />
-                    </div>
-                    <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
-                        <CardComponent />
-                    </div>
-                    <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
-                        <CardComponent />
-                    </div>
-                    <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
-                        <CardComponent />
-                    </div>
-                    <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
-                        <CardComponent />
-                    </div>
-                    <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
-                        <CardComponent />
-                    </div>
-                    <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
-                        <CardComponent />
-                    </div>
-                    <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
-                        <CardComponent />
-                    </div>
+                    {data.map((item) => {
+                        return(
+                            <div className='inBetween' onClick={function () { updateSelectedSquare([1]) }}>
+                                <CardComponent />
+                            </div>
+                        )
+                    })}
                 </div> :
                 <div className='ExpandedVideographyCard'>
                     <div className='CloseIconHolder' onClick={function () { updateSelectedSquare([]) }}>

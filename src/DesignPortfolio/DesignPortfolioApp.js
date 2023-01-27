@@ -18,7 +18,9 @@ const DesignPortfolioApp = () => {
             opacity: 1,
             scale: 1,
             transition: {
-                ease: 'easeIn'
+                type: "spring",
+                bounce: 0.5,
+                duration: 0.6
             }
         },
         showHovered:{

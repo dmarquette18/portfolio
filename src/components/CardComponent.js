@@ -1,10 +1,19 @@
-import React from 'react';
 import './component.css'
+import '../DesignPortfolio/Videography/Videography.css'
+import CloseIcon from '@mui/icons-material/Close';
+import React, { useState, useEffect } from 'react';
 
-const CardComponent = () => {
+
+const CardComponent = (props) => {
+    const [selfSelected, updateSelfSelected] = useState(false)
     return(
-        <div className='GraphicCard'>
-        </div>
+        (!selfSelected ? 
+            <div className='GraphicCard'>
+            </div>
+            :
+            <div></div>
+        )
+        
     )
 }
 
