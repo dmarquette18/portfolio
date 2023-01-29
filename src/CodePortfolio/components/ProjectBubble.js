@@ -126,7 +126,7 @@ const ProjectBubble = (props, { isVisible }) => {
                         </div>
                         <div className='sourceContainer'>
                             <div className='ideaTitle'>source</div>
-                            <a className='ideaText' href={props.link} target="_blank">Github</a>
+                            {props.link.map((item)=><a className='ideaText' href={item} target="_blank">Github</a>)}
                         </div>
                         <div className='sourceContainer'>
                             <div className='ideaTitle'>

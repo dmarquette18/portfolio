@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import '../Videography.css'
+import '../DesignPortfolio/Videography/Videography.css'
 import CloseIcon from '@mui/icons-material/Close';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeVideo } from '../Redux/actions';
 
 const ExpandedVideography = () => {
+    var open = true;
+    const dispatch = useDispatch();
+    const triggerClose = () => {
+        dispatch(removeVideo());
+    }
+    return(
     <div className='ExpandedVideographyCard'>
-        <div className='CloseIconHolder' onClick={function () { updateSelectedSquare([]) }}>
+        <div className='CloseIconHolder' onClick={() => triggerClose()}>
             <CloseIcon className='closeIcon' />
         </div>
         <div className='ExpandedVideographyCardCover' />
@@ -23,5 +31,7 @@ const ExpandedVideography = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </div>)
 }
+
+export default ExpandedVideography;
